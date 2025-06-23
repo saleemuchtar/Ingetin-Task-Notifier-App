@@ -29,3 +29,11 @@ Aplikasi Android sederhana untuk membantu mahasiswa atau pengguna umum dalam men
 - **Library:**
   - AndroidX AppCompat & Material Components
   - RecyclerView/ListView
+
+## Download Aplikasi
+
+Anda dapat mengunduh versi terbaru dari aplikasi ini melalui halaman rilis kami.
+
+
+
+**[➡️ Unduh Ingetin v1.0.0 (APK)](https://github.com/saleemuchtar/Ingetin-Task-Notifier-App/releases/download/v1.0.0/Ingetin.apk)**
