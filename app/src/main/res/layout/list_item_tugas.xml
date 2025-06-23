@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/iv_icon_tugas"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_task"
+            android:layout_marginEnd="16dp"
+            android:layout_centerVertical="true"
+            app:tint="?attr/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toStartOf="@id/btn_hapus_item"
+            android:layout_toEndOf="@id/iv_icon_tugas"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tv_item_nama_tugas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Tugas"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_item_matkul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mata Kuliah"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <TextView
+                android:id="@+id/tv_item_deadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deadline: dd/MM/yyyy HH:mm"
+                android:layout_marginTop="4dp"
+                android:textColor="?attr/colorError"
+                android:textStyle="italic"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_hapus_item"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_delete"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Hapus Tugas"
+            app:tint="?android:attr/textColorSecondary"/>
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

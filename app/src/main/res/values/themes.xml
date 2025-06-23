@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Pengingattugas" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/cokelat_utama</item>
+        <item name="colorOnPrimary">@color/putih</item>
+
+        <item name="colorSecondary">@color/hijau_aksen</item>
+        <item name="colorOnSecondary">@color/hitam</item>
+
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Theme.Pengingattugas" parent="Base.Theme.Pengingattugas" />
+</resources>
