@@ -1,3 +1,5 @@
+[![Android CI Build](https://github.com/saleemuchtar/Ingetin-Task-Notifier-App/actions/workflows/gradle.yml/badge.svg)](https://github.com/saleemuchtar/Ingetin-Task-Notifier-App/actions/workflows/gradle.yml)
+
 # Ingetin - Aplikasi Pengingat Tugas
 
 Aplikasi Android sederhana untuk membantu mahasiswa atau pengguna umum dalam mencatat tugas dan mengatur notifikasi deadline agar tidak terlewat. Aplikasi ini dibuat sebagai Proyek Ujian Akhir Semester Pemrograman Mobile Dasar.
