@@ -124,15 +124,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void scheduleNotification(int id, String namaTugas, long deadline) {
-        Intent intent = new Intent(this, NotificationReceiver.class);
-        intent.putExtra("NAMA_TUGAS", namaTugas);
-        intent.putExtra("NOTIFICATION_ID", id);
+    Intent intent = new Intent(this, NotificationReceiver.class);
+    intent.putExtra("NAMA_TUGAS", namaTugas);
+    intent.putExtra("NOTIFICATION_ID", id);
 
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+    PendingIntent pendingIntent = PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+    AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
-        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        if (alarmManager.canScheduleExactAlarms()) {
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP, deadline, pendingIntent);
+        } else {
+            Toast.makeText(this, "Aplikasi butuh izin untuk menyetel alarm presisi.", Toast.LENGTH_LONG).show();
+            Intent intentSettings = new Intent(android.provider.Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
+            startActivity(intentSettings);
+        }
+    } else {
         alarmManager.setExact(AlarmManager.RTC_WAKEUP, deadline, pendingIntent);
     }
+}
 
     private void loadTugasFromDB() {
         daftarTugas = new ArrayList<>();
